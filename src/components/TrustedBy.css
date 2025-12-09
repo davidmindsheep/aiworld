@@ -1,0 +1,53 @@
+.trusted-section {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.trusted-label {
+    text-align: center;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+}
+
+.logos-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    opacity: 0.8;
+}
+
+.client-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+
+    /* Monochrome Effect */
+    filter: grayscale(100%) opacity(0.5);
+    transition: all 0.4s ease;
+    cursor: default;
+}
+
+.client-logo:hover {
+    filter: grayscale(0%) opacity(1);
+    color: var(--text-main);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .logo-slider {
+        gap: 3rem;
+    }
+
+    .client-logo {
+        font-size: 1.25rem;
+    }
+}

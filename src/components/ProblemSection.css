@@ -1,0 +1,72 @@
+.problem-section {
+    padding-top: var(--section-padding);
+    padding-bottom: 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.problem-card {
+    padding: 2rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.card-icon {
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    background: rgba(34, 211, 238, 0.1);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.problem-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.problem-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.growth-warning {
+    text-align: center;
+    padding: 3rem;
+    border: 1px solid var(--accent);
+    background: linear-gradient(180deg, rgba(34, 211, 238, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.growth-warning h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
