@@ -2,35 +2,41 @@ import React from 'react';
 import { Star } from 'lucide-react';
 import './TestimonialsSection.css';
 
+import hadynEvans from '../assets/testimonials/hadyn-evans.jpg';
+import jamesBanks from '../assets/testimonials/james-banks.png';
+import williamLittlefield from '../assets/testimonials/william-littlefield.png';
+import kanishGosain from '../assets/testimonials/kanish-gosain.jpg';
+import pennFelix from '../assets/testimonials/penn-felix.jpg';
+
 const testimonials = [
     {
         name: "Hadyn Evans",
         title: "CEO, Bluesky Property Investement",
-        image: "https://aitotheworld.ai/wp-content/uploads/2024/10/compressed.jpg",
+        image: hadynEvans,
         content: "Very professional! Harry's AI consultancy service is a game-changer, especially for us in the property biz. They don't just give you generic tips; they really get into the nitty-gritty of what your business is about. They're super upfront about everything they're doing, which is refreshing."
     },
     {
         name: "James Banks",
         title: "CEO, Rankmax AI",
-        image: "https://aitotheworld.ai/wp-content/uploads/2024/09/6DYRblGxo042es9QjE7rG9mI.png",
+        image: jamesBanks,
         content: "Harry's deep understanding of AI, combined with his strategic thinking, has provided me with invaluable guidance that has directly contributed to our success. In addition to his expertise, Harry's efforts in running the AI Founders Meetup in Bali every week have been a phenomenal platform."
     },
     {
         name: "William Littlefield III",
         title: "Chief Software Engineer, Visa",
-        image: "https://aitotheworld.ai/wp-content/uploads/2024/09/B1aej5dT3boW3avJnLSJrl2ZuY.png",
+        image: williamLittlefield,
         content: "Harry is a brilliant and charismatic pillar of the Bali entrepreneurship and AI communities. It is a pleasure to speak with him about business, AI, travel, and professional writing alike. Could not recommend his services more!"
     },
     {
         name: "Kanish Gosain",
         title: "Member of the Technical Staff, Open AI",
-        image: "https://aitotheworld.ai/wp-content/uploads/2024/10/2024-10-01-08.52.58.jpg",
+        image: kanishGosain,
         content: "Working with Harry Verity was an inspiring experience. He has an exceptional ability to lean in and quickly grasp complex AI concepts, from the foundational mathematics to more advanced technologies. Harry knows how to frame the picture around any challenge."
     },
     {
         name: "Penn Frank & Felix Frank",
         title: "Founders of Stack Optimize",
-        image: "https://aitotheworld.ai/wp-content/uploads/2024/10/2024-10-10-17.02.14.jpg",
+        image: pennFelix,
         content: "Harry's advice on AI, marketing and strategy has been one of the key factors in helping us drive Stack Optimize, our lead generation business to over $500,000 in annual revenue. His wisdom in the latest AI tools and strategies has enabled us to take on more clients."
     }
 ];
