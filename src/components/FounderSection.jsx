@@ -1,5 +1,5 @@
 import React from 'react';
-import founderImg from '../assets/images/founder_harry.jpg';
+import founderImg from '../assets/harry-verity-new.jpg';
 import './FounderSection.css';
 
 const FounderSection = () => {

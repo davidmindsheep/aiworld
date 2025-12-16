@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../assets/images/logo.png';
 import './Footer.css';
 
-const Footer = () => {
+const Footer = ({ onOpenModal }) => {
     return (
         <footer className="footer-section">
             <div className="container">
@@ -31,7 +31,7 @@ const Footer = () => {
                             <a href="#">Case Studies</a>
                             <a href="#">About Harry</a>
                             <a href="#">FAQ</a>
-                            <a href="#">Contact</a>
+                            <a href="#" onClick={(e) => { e.preventDefault(); onOpenModal('General Consultation'); }}>Contact</a>
                         </div>
                         <div className="link-col">
                             <h4>Resources</h4>

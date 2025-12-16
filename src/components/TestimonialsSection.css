@@ -1,0 +1,104 @@
+/* Testimonials Section Styles */
+.testimonials-section {
+    padding: var(--section-padding);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.testimonial-card {
+    padding: 2.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    background: var(--bg-card-hover);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+    border-color: rgba(34, 211, 238, 0.2);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.testimonial-image-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 3px;
+    background: var(--gradient-primary);
+    flex-shrink: 0;
+}
+
+.testimonial-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--bg-dark);
+}
+
+.testimonial-info h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--white);
+}
+
+.testimonial-info p {
+    font-size: 0.9rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.testimonial-stars {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1.5rem;
+    color: #FBBF24; /* Amber 400 */
+}
+
+.testimonial-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    font-style: italic;
+    position: relative;
+}
+
+/* Quote icon decoration */
+.testimonial-content::before {
+    content: '"';
+    font-family: serif;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.05);
+    position: absolute;
+    top: -2rem;
+    left: -1rem;
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-card {
+        padding: 2rem;
+    }
+}

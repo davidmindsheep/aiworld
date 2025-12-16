@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CTASection.css';
 
-const CTASection = () => {
+const CTASection = ({ onOpenModal }) => {
     const [employees, setEmployees] = useState(10);
     const [annualWaste, setAnnualWaste] = useState(50000);
 
@@ -44,8 +44,18 @@ const CTASection = () => {
             <div className="final-cta center-text">
                 <h2 style={{ marginBottom: '2rem' }}>Ready to Scale without the Chaos?</h2>
                 <div className="cta-buttons">
-                    <button className="btn-primary">Book My Transformation Call</button>
-                    <button className="btn-outline">Get Free ROI Analysis</button>
+                    <button
+                        className="btn-primary"
+                        onClick={() => onOpenModal('Complete Transformation')}
+                    >
+                        Book My Transformation Call
+                    </button>
+                    <button
+                        className="btn-outline"
+                        onClick={() => onOpenModal('Operational Efficiency')}
+                    >
+                        Get Free ROI Analysis
+                    </button>
                 </div>
             </div>
         </section>

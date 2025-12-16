@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Check } from 'lucide-react';
 import MagneticButton from './ui/MagneticButton';
 import SpotlightCard from './ui/SpotlightCard';
 import './PricingSection.css';
 
-const PricingSection = () => {
+const PricingSection = ({ onOpenModal }) => {
+
+    const handleOpenModal = (planName) => {
+        let interest = "General Consultation";
+        if (planName === "The Growth Readiness Assessment") interest = "Operational Efficiency";
+        if (planName === "The Complete Growth Transformation") interest = "Complete Transformation";
+        if (planName === "The Scale Partnership") interest = "Scale Your Business";
+
+        onOpenModal(interest);
+    };
+
     const plans = [
         {
             name: "The Growth Readiness Assessment",
@@ -61,10 +71,7 @@ const PricingSection = () => {
                     <SpotlightCard key={index} className={`pricing-card reveal-on-scroll ${plan.popular ? 'popular' : ''}`}>
                         {plan.popular && <div className="popular-tag">MOST POPULAR</div>}
                         <h3>{plan.name}</h3>
-                        <div className="price-block">
-                            <span className="price">{plan.price}</span>
-                            {plan.period && <span className="period">{plan.period}</span>}
-                        </div>
+
                         <p className="plan-desc">{plan.desc}</p>
 
                         <div className="features-list">
@@ -78,7 +85,10 @@ const PricingSection = () => {
 
                         <div className="plan-footer">
                             <p className="perfect-for">{plan.perfect}</p>
-                            <MagneticButton className={`btn-block ${plan.popular ? 'btn-primary' : 'btn-outline'}`}>
+                            <MagneticButton
+                                className={`btn-block ${plan.popular ? 'btn-primary' : 'btn-outline'}`}
+                                onClick={() => handleOpenModal(plan.name)}
+                            >
                                 Get Started
                             </MagneticButton>
                         </div>

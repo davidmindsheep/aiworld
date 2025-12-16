@@ -17,6 +17,12 @@
     height: 100%;
     position: relative;
     transition: transform 0.3s;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    /* Added gap for vertical spacing between areas */
+    gap: 1.5rem;
 }
 
 .pricing-card:hover {
@@ -28,14 +34,14 @@
     border: 1px solid var(--primary);
     background: linear-gradient(180deg, rgba(16, 185, 129, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
     padding-top: 5rem;
-    /* Max padding */
+    /* Max padding for pop-out effect */
     margin-top: -1.5rem;
 }
 
 .popular-tag {
     position: absolute;
     top: -4.5rem;
-    /* Move into the padding area */
+    /* Adjusted for pop-out */
     right: 0;
     left: 0;
     margin: auto;
@@ -54,33 +60,61 @@
 .pricing-card h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    min-height: 3.6rem;
+    /* min-height removed/reduced since no price block might change flow, but keeping for alignment */
+    min-height: 3rem;
+    text-align: center;
+    /* Generally looks better centered without price */
 }
 
-.plan-target {
-    font-size: 0.9rem;
+/* Plan description */
+.plan-desc {
     color: var(--text-muted);
-    font-style: italic;
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-.plan-features {
-    list-style: none;
-    margin-bottom: 2rem;
-    flex: 1;
+.features-list {
+    margin-top: auto;
+    /* Pushes list down if needed, or just spacers */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.plan-features li {
+.feature-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 1rem;
+    gap: 0.75rem;
     font-size: 0.95rem;
     color: var(--text-main);
 }
 
 .check-icon {
     color: var(--primary);
-    margin-right: 0.75rem;
-    margin-top: 3px;
     flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.plan-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers the button */
+    gap: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.perfect-for {
+    font-size: 0.9rem;
+    color: var(--cyan);
+    font-weight: 600;
+    font-style: italic;
+}
+
+.btn-block {
+    width: 100%;
+    max-width: 200px;
+    /* Limit button width so it centers nicely */
 }

@@ -1,9 +1,9 @@
 import React from 'react';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import MagneticButton from './ui/MagneticButton';
 import './Hero.css';
 
-const Hero = () => {
+const Hero = ({ onOpenModal }) => {
     return (
         <section className="hero-section">
             <div className="hero-bg">
@@ -25,13 +25,13 @@ const Hero = () => {
                 </div>
 
                 <div className="hero-actions">
-                    <MagneticButton className="btn-primary flex-center">
+                    <MagneticButton
+                        className="btn-primary flex-center"
+                        style={{ minWidth: '280px', padding: '1.25rem 2.5rem' }} // Made bigger as requested
+                        onClick={() => onOpenModal('Scale Your Business')}
+                    >
                         Unlock My Growth Potential
                         <ArrowRight size={20} style={{ marginLeft: '0.5rem' }} />
-                    </MagneticButton>
-                    <MagneticButton className="btn-outline flex-center">
-                        <Play size={20} style={{ marginRight: '0.5rem' }} />
-                        See How We Scale Businesses
                     </MagneticButton>
                 </div>
 
@@ -42,11 +42,13 @@ const Hero = () => {
                     </div>
                     <div className="stat-divider"></div>
                     <div className="stat-item">
-                        <div className="stat-header">
-                            <span className="stat-label text-gradient">AFTER</span>
-                            <span className="result-tag">RESULT</span>
-                        </div>
+                        <span className="stat-label text-gradient">AFTER</span>
                         <p>Same team handles 3x the workload effortlessly</p>
+                    </div>
+                    <div className="stat-divider"></div>
+                    <div className="stat-item">
+                        <span className="stat-label text-gradient">RESULT</span>
+                        <p>Ready to scale without operational chaos</p>
                     </div>
                 </div>
             </div>

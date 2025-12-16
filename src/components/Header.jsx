@@ -3,7 +3,7 @@ import { Menu, X } from 'lucide-react';
 import logo from '../assets/images/logo.png';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ onOpenModal }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('');
@@ -57,7 +57,7 @@ const Header = () => {
                             {link.name}
                         </a>
                     ))}
-                    <button className="btn-primary">Get Started</button>
+                    <button className="btn-primary" onClick={() => onOpenModal('General Consultation')}>Get Started</button>
                 </nav>
 
                 {/* Mobile Menu Toggle */}
@@ -80,7 +80,7 @@ const Header = () => {
                             {link.name}
                         </a>
                     ))}
-                    <button className="btn-primary" onClick={() => setIsMobileMenuOpen(false)}>
+                    <button className="btn-primary" onClick={() => { setIsMobileMenuOpen(false); onOpenModal('General Consultation'); }}>
                         Get Started
                     </button>
                 </div>
