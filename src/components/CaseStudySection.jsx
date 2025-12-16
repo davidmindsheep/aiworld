@@ -38,11 +38,6 @@ const CaseStudySection = () => {
                         </div>
                     </div>
                 </div>
-
-                <div className="case-quote">
-                    <p>"From operations bottleneck to competitive advantage - now we can scale without limits."</p>
-                    <span className="quote-author">- JAM Safety Representative</span>
-                </div>
             </div>
         </section>
     );
