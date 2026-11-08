@@ -3,3 +3,7 @@ dist
 .env
 .DS_Store
 coverage
+
+# Claude Code local settings: saved "Don't ask again" rules can contain keys and passwords
+**/.claude/settings.local.json
+CLAUDE.local.md
